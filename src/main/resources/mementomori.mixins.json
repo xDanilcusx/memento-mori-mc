@@ -3,7 +3,8 @@
 	"package": "danilcus.mementomori.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"EnchantmentTargetMixin",
+		"EnchantmentTargetWeaponMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
