@@ -1,12 +1,14 @@
 {
-	"required": true,
-	"package": "danilcus.mementomori.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"EnchantmentTargetMixin",
-		"EnchantmentTargetWeaponMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "danilcus.mementomori.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EnchantmentTargetMixin",
+    "EnchantmentTargetWeaponMixin",
+    "LivingEntityMixin",
+    "SoulFireBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

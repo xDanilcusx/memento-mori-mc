@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"danilcus.mementomori.MementoMoriClient"
+		],
+		"mm:early_risers": [
+			"danilcus.mementomori.EarlyRiser"
 		]
 	},
 	"mixins": [

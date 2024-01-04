@@ -1,9 +1,13 @@
 package danilcus.mementomori;
 
+import danilcus.mementomori.enchantments.ReapingEnchantment;
+import danilcus.mementomori.enchantments.TwinsEnchantment;
 import danilcus.mementomori.item.SickleItem;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.FireBlock;
+import net.minecraft.block.SoulFireBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemGroup;
@@ -20,12 +24,12 @@ public class MementoMori implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final String MOD_ID = "reapwys";
+	public static final String MOD_ID = "mementomori";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final HashMap<String, Enchantment> ENCHANTMENTS = new HashMap<>() {{
-		//put("twins", new TwinsEnchantment(EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND));
-		//put("reaping", new ReapingEnchantment(EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND));
+		put("twins", new TwinsEnchantment(EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND));
+		put("reaping", new ReapingEnchantment(EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND));
 	}};
 
 	@Override
@@ -37,7 +41,7 @@ public class MementoMori implements ModInitializer {
 			Registry.register(Registry.ENCHANTMENT, ID(enchantment.getKey()), enchantment.getValue());
 		}
 
-		Registry.register(Registry.ITEM, ID("sickle"), new SickleItem(ToolMaterials.NETHERITE, new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+		Registry.register(Registry.ITEM, ID("deaths_sickle"), new SickleItem(ToolMaterials.NETHERITE, new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 	}
 
 	public static Identifier ID(String path) {
